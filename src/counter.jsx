@@ -2,21 +2,25 @@ import { useState } from "react"
 
 export default function Counter() {
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0)
 
-    const handleAdd = () => {
-        const newCount = count + 1
-        setCount(newCount)
+    function handleIncrease() {
+        const updateCount = count + 1;
+        setCount(updateCount)
     }
-    const handleRemove = () => {
-        setCount(count - 1)
+
+    function handleDecrease() {
+        if (count) {
+            const updateCount = count - 1;
+            setCount(updateCount)
+        }
     }
 
     return (
         <div className="myclass">
-            <h3>Counter: {count}</h3>
-            <button onClick={handleAdd}>Add</button>-
-            <button onClick={handleRemove}>Remove</button>
+            <h3>counter: {count}</h3>
+            <button onClick={handleIncrease}>Increase</button>
+            <button onClick={handleDecrease}>Decrease</button>
         </div>
     )
 }

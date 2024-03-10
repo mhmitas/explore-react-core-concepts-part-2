@@ -22,8 +22,8 @@ button{
 }
 
 .box{
-  width: 200px;
-  height: 200px;
+  width: max-content;
+  height: max-content;
   background-color: #81E6D9;
   color: #101023;
   padding: 15px;
