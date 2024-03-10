@@ -2,10 +2,22 @@ import './App.css'
 import Counter from './counter'
 
 
-function App() {
+export default function App() {
+  return (
+    <div>
+      <h3>Today is module 39</h3>
+      {/* <Counter></Counter> */}
+      <PlayWithEvent />
+    </div>
+  )
+
+}
+
+
+function PlayWithEvent() {
 
   function HandleClick() {
-    alert('button clicked')
+    alert('button-01 clicked')
   }
   function HandleClick2() {
     alert('button 2 clicked')
@@ -15,17 +27,12 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='myclass'>
       <h3>React core concepts</h3>
 
-      <Counter></Counter>
-
-      <button onClick={HandleClick}>Click me</button>
-      <button onClick={HandleClick2}>Click me 2</button>
-      <button onClick={() => { alert('button-3 clicked') }}>Click me 3</button>
-      <button onClick={() => addToFive(4)}>Click me 4</button>
+      <button onClick={HandleClick}>button-01</button>
+      <button onClick={function(){alert('button-02 clicked')}}>button-02</button>
+      
     </div>
   )
 }
-
-export default App
