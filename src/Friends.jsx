@@ -1,40 +1,31 @@
 import { useEffect, useState } from "react"
+import Friend from "./friend"
 
 export default function Friends() {
 
-    const [friends, setFriends] = useState([])
+    const [friends, setFrinds] = useState([])
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
-            .then(data => setFriends(data))
+            .then(data => setFrinds(data))
     }, [])
 
     return (
-        <div className="box">
+        <div className="myclass">
             <h3>Friends: {friends.length}</h3>
-            <friend/>
-            <abc></abc>
+
+            {
+                friends.map(friend => <Friend friend={friend}></Friend>)
+            }
+
         </div>
     )
 }
 
-
-function friend() {
-    return (
-        <div>
-            <h4>Name: </h4>
-        </div>
-    )
-}
-
-function abc(){
-    return <h3>hello</h3>
-}
 
 /**
- * 1. state to hold data
- * 2. use effect with dependency array
- * 3. use fetch to load data
- * 4. set loded data to the state
+ * 1 declare state to hold data
+ * 2 useEffect with dependency array
+ * 3 use fetch to load data
  */

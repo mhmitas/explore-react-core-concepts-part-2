@@ -11,7 +11,6 @@ export default function App() {
       {/* <PlayWithEvent /> */}
       {/* <Counter></Counter> */}
       {/* <Team /> */}
-      <abc></abc>
       {/* <Users /> */}
       <Friends />
     </div>
@@ -41,8 +40,4 @@ function PlayWithEvent() {
 
     </div>
   )
-}
-
-function abc(){
-    return <h3>hello</h3>
 }

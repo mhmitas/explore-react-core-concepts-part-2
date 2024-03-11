@@ -19,5 +19,7 @@ export default function Users() {
 
 /**
  * 1. declare a state to hold the data 
- * 2. useEffect with call back and dependency
+ * 2. useEffect with call back and dependency array.
+ * 3. load data using fetch.
+ * 
  */
